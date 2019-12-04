@@ -12,31 +12,21 @@ namespace liveCoding3
 
 
         {
-            
-            int [] array_one = { 1, 5, 2 };
 
-            int[] array_two = { 3,6,4 };
 
-            int[] zipped_array = new int [6];
-
+            int[] array_one = { 1, 5, 2 };
+            int[] array_two = { 3, 6, 4 };
+            var zipped_array = new List<int>();
             for (int i = 0; i < array_one.Length; i++)
             {
-                zipped_array[i] = array_one[i];
-
-                
-
+                zipped_array.Add(array_one[i]);
+                zipped_array.Add(array_two[i]);
             }
 
-            for (int j = 0; j < array_two.Length; j++)
+            foreach (var num in zipped_array)
             {
-                zipped_array[j] = array_two[j];
+                Console.WriteLine(num);
 
-
-            }
-
-            for (int i = 0; i < zipped_array.Length; i++)
-            {
-                Console.WriteLine(zipped_array[i]);
             }
 
             Console.ReadLine();
